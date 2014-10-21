@@ -48,6 +48,20 @@ class TimeSim
 
 end
 
-#mytimesim = TimeSim.new
-#mytime = mytimesim.get_random_time(14)
-#puts mytime
+#
+# Gets a random array of times and then
+# sorts them for yesterday and today
+#
+# Still need to work out getting timestamps for today only
+# If there is a need to do this we can do it later
+#
+=begin
+mytimesim = TimeSim.new
+timeary = []
+n = 10
+for i in 1..n
+  mytime = mytimesim.get_random_time(1)
+  timeary.push(mytime)
+end
+puts timeary.sort
+=end
