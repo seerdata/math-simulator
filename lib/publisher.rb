@@ -16,7 +16,7 @@ class Publisher
   end
 
   def publish_once(options,exchange)
-    msg = get_message_type(options)
+    msg = get_message_by_type(options)
     n = options.n
     msgs = msg.build_n_messages(n)
     for i in 1..n
@@ -31,7 +31,7 @@ class Publisher
     seconds = options.s
     iterations = options.i
     for i in 1..iterations
-      msg = get_message_type(options)
+      msg = get_message_by_type(options)
       n = options.n
       msgs = msg.build_n_messages(n)
       for i in 1..n
@@ -49,7 +49,7 @@ class Publisher
       seconds = options.s
       iterations = options.i
       for i in 1..iterations
-        msg = get_message_type(options)
+        msg = get_message_by_type(options)
         n = options.n
         msgs = msg.build_n_messages(n)
         for i in 1..n
@@ -63,7 +63,7 @@ class Publisher
     end
   end
 
-  def get_message_type(options)
+  def get_message_by_type(options)
     if options.a == 'visit'
       if options.verbose
         puts 'Inside Msgvisit'
