@@ -46,22 +46,27 @@ class TimeSim
     get_random_time_between_two_dates(min_date,max_date)
   end
 
-end
-
 #
-# Gets a random array of times and then
-# sorts them for yesterday and today
+# The day_interval @options.d by default in the math simulator is 1
+# Gets a random array of times and then sorts them for yesterday and today
 #
 # Still need to work out getting timestamps for today only
 # If there is a need to do this we can do it later
 #
-=begin
-mytimesim = TimeSim.new
-timeary = []
-n = 10
-for i in 1..n
-  mytime = mytimesim.get_random_time(1)
-  timeary.push(mytime)
+
+  def get_sorted_time_array(day_interval,n)
+    timeary = []
+    for i in 1..n
+      mytime = get_random_time(day_interval)
+      timeary.push(mytime)
+    end
+    timeary.sort
+  end
+
 end
+
+=begin
+ts = TimeSim.new
+timeary = ts.get_sorted_time_array(1,10)
 puts timeary.sort
 =end
