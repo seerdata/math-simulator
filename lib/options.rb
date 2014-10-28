@@ -14,7 +14,7 @@ class Options
     options.forever = false
     options.verbose = false
 
-    options.d = 10
+    options.d = 1
     options.e = "test.spnee.customer"
     options.i = 1
     options.m = "visit-useragent"
