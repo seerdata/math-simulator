@@ -20,7 +20,7 @@ class Options
     options.m = "visit-useragent"
     options.n = 2
     options.s = 10
-    options.a = "visit"
+    options.a = "math"
     options.b = "useragent"
 
     opt_parser = OptionParser.new do |opts|

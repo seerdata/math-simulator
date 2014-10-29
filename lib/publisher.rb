@@ -1,5 +1,6 @@
 
 require_relative './msgjob'
+require_relative './msgmath'
 require_relative './msgvisit'
 require 'json'
 
@@ -74,6 +75,11 @@ class Publisher
         puts 'Inside Msgjob'
       end
       Msgjob.new(options)
+    elsif options.a == 'math'
+      if options.verbose
+        puts 'Inside MsgMath'
+      end
+      MsgMath.new(options)
     else
       print 'publisher.rb ', options.a, ' is not a supported message dimension'
       puts
