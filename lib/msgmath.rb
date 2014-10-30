@@ -14,10 +14,6 @@ class MsgMath < Msgbase
     ['ios','android','java','python','ruby'].sample
   end
 
-  def get_value
-    (1..10).to_a.sample
-  end
-
   def get_interval
     ['days','weeks']
   end
@@ -52,7 +48,7 @@ class MsgMath < Msgbase
     dimension = get_dimension
     msg_hash[:dimension] = dimension
     msg_hash[:key] = get_key
-    msg_hash[:value] = value
+    msg_hash[:value] = value.to_s
     msg_hash[:created_at] = time
     msg_hash[:interval] = get_interval
     msg_hash[:calculation] = get_calculation
